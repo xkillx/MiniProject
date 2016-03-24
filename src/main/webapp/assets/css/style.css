@@ -1,0 +1,54 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+#header {
+    background-color: lightblue;
+    height: 50px;
+}
+
+#menu {
+    height: 25px;
+    background-color: #CCFFFF;
+}
+
+#main {
+    background-color: #FFFFCC;
+    min-height: 300px;
+}
+
+#left {
+    float: left;
+    width: 25%;
+}
+
+#right {
+    float: right;
+    width: 75%;
+    overflow: auto;
+}
+
+#content {
+    padding: 10px;
+}
+
+#footer {
+    text-align: center;
+    line-height: 20px;
+    background-color: green;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+} 
+
+li {
+    display: inline;
+}
+
+li a {
+    width: 60px;
+}

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.ui.theme" value="simple" />
+
+	<package name="index" namespace="/" extends="struts-default">
+		<default-action-ref name="list"/>
+		<action name="list" class="indexAction" method="list">
+			<result name="success">/WEB-INF/jsp/index/list.jsp</result>
+		</action>
+		<action name="daftar" class="indexAction" method="daftar">
+			<result name="success">/WEB-INF/jsp/index/daftarForm.jsp</result>
+		</action>
+		<action name="cekEmail" class="indexAction" method="cekEmail">
+			<result name="success">/WEB-INF/jsp/index/sukses.jsp</result>
+			<result name="daftar">/WEB-INF/jsp/index/registrasiForm.jsp</result>
+		</action>
+	</package>
+
+	<package name="instruktur" namespace="/admin/instruktur" extends="struts-default">
+		<default-action-ref name="list"/>
+		<action name="saveOrUpdate" method="saveOrUpdate" class="instrukturAction">
+			<result name="success" type="redirect">list</result>
+		</action>
+		<action name="add" method="add" class="instrukturAction">
+			<result name="success">/WEB-INF/jsp/instruktur/add.jsp</result>
+		</action>
+		<action name="list" method="list" class="instrukturAction">
+			<result name="success">/WEB-INF/jsp/instruktur/list.jsp</result>
+		</action>
+		<action name="edit" method="edit" class="instrukturAction">
+			<result name="success">/WEB-INF/jsp/instruktur/edit.jsp</result>
+		</action>
+		<action name="delete" method="delete" class="instrukturAction">
+			<result name="success" type="redirect">list</result>
+		</action>
+	</package>
+	
+	<package name="kursus" namespace="/admin/kursus" extends="struts-default">
+		<default-action-ref name="list"/>
+		<action name="saveOrUpdate" method="saveOrUpdate" class="kursusAction">
+			<result name="success" type="redirect">list</result>
+		</action>
+		<action name="add" method="add" class="kursusAction">
+			<result name="success">/WEB-INF/jsp/kursus/add.jsp</result>
+		</action>
+		<action name="list" method="list" class="kursusAction">
+			<result name="success">/WEB-INF/jsp/kursus/list.jsp</result>
+		</action>
+		<action name="edit" method="edit" class="kursusAction">
+			<result name="success">/WEB-INF/jsp/kursus/edit.jsp</result>
+		</action>
+		<action name="delete" method="delete" class="kursusAction">
+			<result name="success" type="redirect">list</result>
+		</action>
+	</package>
+	
+	<package name="vendor" namespace="/admin/vendor" extends="struts-default">
+		<default-action-ref name="list"/>
+		<action name="saveOrUpdate" method="saveOrUpdate" class="vendorAction">
+			<result name="success" type="redirect">list</result>
+		</action>
+		<action name="add" method="add" class="vendorAction">
+			<result name="success">/WEB-INF/jsp/vendor/add.jsp</result>
+		</action>
+		<action name="list" method="list" class="vendorAction">
+			<result name="success">/WEB-INF/jsp/vendor/list.jsp</result>
+		</action>
+		<action name="edit" method="edit" class="vendorAction">
+			<result name="success">/WEB-INF/jsp/vendor/edit.jsp</result>
+		</action>
+		<action name="delete" method="delete" class="vendorAction">
+			<result name="success" type="redirect">list</result>
+		</action>
+	</package>
+	
+	<package name="peserta" namespace="/admin/peserta" extends="struts-default">
+		<default-action-ref name="list"/>
+		<action name="saveOrUpdate" method="saveOrUpdate" class="registrasiAction">
+			<result name="success" type="redirect">list</result>
+		</action>
+		<action name="add" method="add" class="registrasiAction">
+			<result name="success">/WEB-INF/jsp/peserta/add.jsp</result>
+		</action>
+		<action name="list" method="list" class="registrasiAction">
+			<result name="success">/WEB-INF/jsp/peserta/list.jsp</result>
+		</action>
+		<action name="edit" method="edit" class="registrasiAction">
+			<result name="success">/WEB-INF/jsp/peserta/edit.jsp</result>
+		</action>
+		<action name="delete" method="delete" class="registrasiAction">
+			<result name="success" type="redirect">list</result>
+		</action>
+	</package>
+	
+	<package name="sesi" namespace="/admin/sesi" extends="struts-default">
+		<default-action-ref name="list"/>
+		<action name="saveOrUpdate" method="saveOrUpdate" class="sesiAction">
+			<result name="success" type="redirect">list</result>
+		</action>
+		<action name="add" method="add" class="sesiAction">
+			<result name="success">/WEB-INF/jsp/sesi/add.jsp</result>
+		</action>
+		<action name="list" method="list" class="sesiAction">
+			<result name="success">/WEB-INF/jsp/sesi/list.jsp</result>
+		</action>
+		<action name="edit" method="edit" class="sesiAction">
+			<result name="success">/WEB-INF/jsp/sesi/edit.jsp</result>
+		</action>
+		<action name="delete" method="delete" class="sesiAction">
+			<result name="success" type="redirect">list</result>
+		</action>
+		<action name="detail" method="detail" class="sesiAction">
+			<result name="success">/WEB-INF/jsp/sesi/detail.jsp</result>
+		</action>
+	</package>
+
+</struts>
